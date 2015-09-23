@@ -4,16 +4,28 @@ author: "Carlosjunior4763"
 date: "Sunday, September 20, 2015"
 output: html_document
 ---
+<<<<<<< HEAD
+# Personal Movement Analysis
+
+## About
+It is now possible to collect a large amount of data about personal movement using activity monitoring devices such as a [Fitbit](https://www.fitbit.com/), [Nike Fuelband](http://www.nike.com/us/en_us/c/nikeplus-fuel), or [Jawbone Up](https://jawbone.com/up/app). 
+
+=======
 
 ## About
 It is now possible to collect a large amount of data about personal movement using activity monitoring devices such as a Fitbit, 
 Nike Fuelband, or Jawbone Up. 
+>>>>>>> origin/master
 
 This assignment makes use of data from a personal activity monitoring device. This device collects data at 5 minute intervals through out the day. The data consists of two months of data from an anonymous individual collected during the months of October and November, 2012 and include the number of steps taken in 5 minute intervals each day.
 
 ## Data
 Data for assignment was downloaded from the course web site:
+<<<<<<< HEAD
+Dataset: [Activity monitoring data](http://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip) 52K
+=======
 Dataset: Activity monitoring data [52K]
+>>>>>>> origin/master
 
 ## Assignment
 Get and analyse data
@@ -43,7 +55,11 @@ head(act)
 tail(act)
 str(act)
 act$date <- as.Date(as.character(act$date, format ="%Y/%m/%d")) ## coerse to data format
+<<<<<<< HEAD
 actc <- subset(act, !is.na(steps))  ## extract NA´s steps
+=======
+actc <- subset(act, !is.na(steps))  ## extract NAÂ´s steps
+>>>>>>> origin/master
 ```
 
 ## What is mean total number of steps taken per day?
@@ -125,7 +141,11 @@ mean_diff <- mean_comp - rmean
 
 ## Are there differences in activity patterns between weekdays and weekends?
 
-Create a new factor variable in the dataset with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.
+<<<<<<< HEAD
+Create a new factor variable in the dataset with two levels - "weekday" and "weekend" indicating whether a given date is a weekday or weekend day.
+=======
+Create a new factor variable in the dataset with two levels â âweekdayâ and âweekendâ indicating whether a given date is a weekday or weekend day.
+>>>>>>> origin/master
 
 ```{r}
 # Create a factor variable with two levels (weekday, weekend-day)
@@ -140,7 +160,11 @@ workWDFactor <- factor(workWD, levels = c(0, 1))
 act$WD <- workWDFactor
 ```
 
+<<<<<<< HEAD
+Calculate the mean per week day
+=======
 Calculate the mean per WD
+>>>>>>> origin/master
 ```{r}
 stepsWD <- tapply(act$steps, list(act$interval, act$WD), mean, 
                               na.rm = T)
