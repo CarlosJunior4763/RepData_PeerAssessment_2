@@ -45,11 +45,7 @@ head(act)
 tail(act)
 str(act)
 act$date <- as.Date(as.character(act$date, format ="%Y/%m/%d")) ## coerse to data format
-<<<<<<< HEAD
 actc <- subset(act, !is.na(steps))  ## extract NA´s steps
-=======
-actc <- subset(act, !is.na(steps))  ## extract NAÂ´s steps
->>>>>>> origin/master
 ```
 
 ## What is mean total number of steps taken per day?
